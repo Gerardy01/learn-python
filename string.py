@@ -84,6 +84,20 @@ splited = joined_sentence.split(" ")
 print(splited)
 
 
+# string formating (mirip `asakjsdk ${nama}`)
+
+nama_ini = "Budi"
+
+test_string = f"hello {nama_ini}"
+print(test_string)
+
+
+
+angka = 2000000
+the_string = f"{angka:,}"
+print(the_string)
+
+
 
 
 
