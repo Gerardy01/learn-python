@@ -139,7 +139,27 @@ while True:
         continue
     else:
         break
-    
+
+
+
+
+
+
+
+#  data tuoples
+# mirip list tapi tidak bisa di ubah (fixed)
+
+data_tuples = (1, 2, 3, 4, 5, 6)
+print(data_tuples)
+
+
+
+
+# sets
+# collection tanpa index (bisa diubah2 tapi tidak bisa mengambil index nya)
+
+data_sets = {1, 2, 3, 4, 5, 6, 7}
+print(data_sets)
 
 
 
