@@ -146,4 +146,61 @@ manager_one.print_employees()
 print(isinstance(manager_one, Employee)) # True 
 print(issubclass(Manager, Developer)) # False
 
+
+
+
+# Decortor
+
+class Student:
+
+    def __init__(self, first_name, last_name = '', age = 0):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+    
+
+    @property # to make method can be called like an argument
+    def email(self):
+        if len(self.last_name) == 0:
+            return f'{self.first_name.lower()}@gmail.com'
+        
+        return f'{self.first_name.lower()}.{self.last_name.lower()}@gmail.com'
+    
+    @property
+    def full_name(self):
+        if len(self.last_name) == 0:
+            return f'{self.first_name}'
+        
+        return f'{self.first_name} {self.last_name}'
+    
+
+    @full_name.setter # to set full name like an argument
+    def full_name(self, name):
+
+        if ' ' in name:
+            first, last = name.split(' ')
+
+            self.first_name = first
+            self.last_name = last
+        else:
+            first = name
+
+            self.first_name = first
+            self.last_name = ''
+
+
+
+student_one = Student('Jono', 'Gede', 20)
+student_two = Student('Budi', age=20)
+
+print(student_one.email)
+print(student_two.email)
+
+print(student_one.full_name)
+
+student_one.full_name = 'Yono'
+print(student_one.full_name)
+print(student_one.email)
+
+
     
